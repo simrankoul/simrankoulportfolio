@@ -16,7 +16,7 @@ const Timeline = ({ timeline }) => {
         years.push(parseInt(matches[matches.length - 1]));
       } else {
         // For work and certification, use all years
-        matches.forEach(year => years.push(parseInt(year)));
+        matches.forEach(year => years.push(parseInt(matches[0])));
       }
     }
     return years;
