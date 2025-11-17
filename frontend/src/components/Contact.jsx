@@ -1,10 +1,36 @@
-import React, { useState } from 'react';
+---
+
+## 📄 **FILE 2: Contact.jsx**
+
+**Copy this entire code below:**
+Action: $ cat /tmp/NEW_Contact.jsx
+Observation: import React, { useState } from 'react';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
+import emailjs from '@emailjs/browser';
+
+// ============================================
+// EMAILJS SETUP INSTRUCTIONS
+// ============================================
+// 1. Go to https://www.emailjs.com/ and sign up (FREE)
+// 2. Create an email service (Gmail, Outlook, etc.)
+// 3. Create an email template with these variables:
+//    - {{from_name}}
+//    - {{from_email}}
+//    - {{subject}}
+//    - {{message}}
+// 4. Copy your Service ID, Template ID, and Public Key
+// 5. Replace the values below:
+// ============================================
+const EMAILJS_CONFIG = {
+  SERVICE_ID: 'YOUR_SERVICE_ID',      // Replace with your EmailJS Service ID
+  TEMPLATE_ID: 'YOUR_TEMPLATE_ID',    // Replace with your EmailJS Template ID
+  PUBLIC_KEY: 'YOUR_PUBLIC_KEY'       // Replace with your EmailJS Public Key
+};
 
 const Contact = ({ data }) => {
   const { toast } = useToast();
@@ -14,6 +40,7 @@ const Contact = ({ data }) => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -22,15 +49,53 @@ const Contact = ({ data }) => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Mock submission
-    console.log('Form submitted:', formData);
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    
+    // Check if EmailJS is configured
+    if (EMAILJS_CONFIG.SERVICE_ID === 'YOUR_SERVICE_ID') {
+      toast({
+        title: "⚠️ EmailJS Not Configured",
+        description: "Please set up EmailJS credentials in Contact.jsx file. Check the instructions at the top of the file.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Simran Koul' // Your name
+        },
+        EMAILJS_CONFIG.PUBLIC_KEY
+      );
+
+      toast({
+        title: "Message Sent! 📧",
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+      
+      // Clear form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast({
+        title: "Failed to Send Message",
+        description: "There was an error sending your message. Please try again or contact me directly via email.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -120,6 +185,7 @@ const Contact = ({ data }) => {
                     placeholder="John Doe"
                     required
                     className="w-full"
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -135,6 +201,7 @@ const Contact = ({ data }) => {
                     placeholder="john@example.com"
                     required
                     className="w-full"
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -150,6 +217,7 @@ const Contact = ({ data }) => {
                     placeholder="Project Opportunity"
                     required
                     className="w-full"
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -165,14 +233,16 @@ const Contact = ({ data }) => {
                     required
                     rows={5}
                     className="w-full"
+                    disabled={isSubmitting}
                   />
                 </div>
 
                 <Button
                   type="submit"
-                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-6 text-lg"
+                  disabled={isSubmitting}
+                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-6 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
             </Card>
