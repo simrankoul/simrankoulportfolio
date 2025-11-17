@@ -14,7 +14,7 @@ export const myPortfolioData = {
     email: "simrankoul525@gmail.com",
     phone: "+91 9779939097",
     location: "Chandigarh, India",
-    photo: "https://photos.google.com/album/AF1QipMJldc38OSvLD_cPMrtjU7lqA76ExPEDHG6PVh6/photo/AF1QipMLeDzvkSVACzoMBKLKUJ5lDT1xCIz5yLrcdqZ-",
+    photo: "https://raw.githubusercontent.com/simrankoul/simrankoulportfolio/main/public/1761508914535.jpg",
     summary: "Your professional summary here...",
     linkedin: "https://linkedin.com/in/simrankoul",
     github: "https://github.com/simrankoul",
