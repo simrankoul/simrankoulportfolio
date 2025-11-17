@@ -56,11 +56,11 @@ export const myPortfolioData = {
     {
       id: 1,
       type: "work",
-      company: "TechCorp Solutions",
+      company: "Nagarro",
       logo: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=100&h=100&fit=crop",
-      designation: "Senior Project Manager",
-      duration: "Jan 2022 - Present",
-      location: "San Francisco, CA",
+      designation: "Senior Engineer",
+      duration: "Jan 2023 - Nov 2024",
+      location: "Gurugram, India",
       description: "Leading enterprise-level digital transformation projects with teams of 15+ members. Managed $2M+ project budgets and delivered 12 major projects with 98% client satisfaction.",
       achievements: [
         "Led digital transformation initiative resulting in 40% operational efficiency",
@@ -71,11 +71,11 @@ export const myPortfolioData = {
     {
       id: 2,
       type: "work",
-      company: "TechCorp Solutions",
+      company: "Nagarro",
       logo: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=100&h=100&fit=crop",
-      designation: "Project Manager",
-      duration: "Mar 2020 - Dec 2021",
-      location: "San Francisco, CA",
+      designation: "Engineer",
+      duration: "Feb 2022 - Jan 2023",
+      location: "Gurugram, India",
       description: "Managed software development projects and coordinated with stakeholders to ensure successful project delivery.",
       achievements: [
         "Successfully delivered 8 projects on time and within budget",
@@ -86,11 +86,11 @@ export const myPortfolioData = {
     {
       id: 3,
       type: "work",
-      company: "TechCorp Solutions",
+      company: "Nagarro",
       logo: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=100&h=100&fit=crop",
-      designation: "Associate Project Manager",
-      duration: "Jun 2018 - Feb 2020",
-      location: "San Francisco, CA",
+      designation: "Associate Engineer",
+      duration: "Feb 2021 - Feb 2022",
+      location: "Gurugram, India",
       description: "Assisted senior project managers in planning and execution of medium-scale projects.",
       achievements: [
         "Coordinated 5 concurrent projects with team of 10 members",
@@ -101,11 +101,11 @@ export const myPortfolioData = {
     {
       id: 4,
       type: "work",
-      company: "TechCorp Solutions",
+      company: "Nagarro",
       logo: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=100&h=100&fit=crop",
-      designation: "Project Coordinator",
-      duration: "Jan 2017 - May 2018",
-      location: "San Francisco, CA",
+      designation: "Engineer Trainee",
+      duration: "Nov 2020 - Jan 2021",
+      location: "Gurugram, India",
       description: "Supported project teams with scheduling, documentation, and stakeholder communication.",
       achievements: [
         "Maintained 100% on-time project documentation",
