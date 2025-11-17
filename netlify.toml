@@ -1,0 +1,18 @@
+[build]
+  # Directory where the React app is located
+  base = "frontend"
+  
+  # Command to build the React app
+  command = "yarn install && yarn build"
+  
+  # Directory to publish (where the built files will be)
+  publish = "frontend/build"
+
+[build.environment]
+  # Node version
+  NODE_VERSION = "20"
+  
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
