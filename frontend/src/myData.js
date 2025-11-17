@@ -158,8 +158,8 @@ export const myPortfolioData = {
       type: "certification",
       title: "Certified Scrum Master (CSM)",
       issuer: "Scrum Alliance",
-      issued: "March 2021",
-      credentialId: "CSM-123456",
+      issued: "September 2025",
+      credentialId: "001786799",
       description: "Professional certification demonstrating expertise in Scrum framework and Agile project management methodologies."
     }
     // Add more timeline entries: work, education, certification, break
