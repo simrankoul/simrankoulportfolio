@@ -1,36 +1,21 @@
----
-
-## 📄 **FILE 2: Contact.jsx**
-
-**Copy this entire code below:**
-Action: $ cat /tmp/NEW_Contact.jsx
-Observation: import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Card } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
-import emailjs from '@emailjs/browser';
 
 // ============================================
-// EMAILJS SETUP INSTRUCTIONS
+// WEB3FORMS SETUP INSTRUCTIONS
 // ============================================
-// 1. Go to https://www.emailjs.com/ and sign up (FREE)
-// 2. Create an email service (Gmail, Outlook, etc.)
-// 3. Create an email template with these variables:
-//    - {{from_name}}
-//    - {{from_email}}
-//    - {{subject}}
-//    - {{message}}
-// 4. Copy your Service ID, Template ID, and Public Key
-// 5. Replace the values below:
+// 1. Go to https://web3forms.com/
+// 2. Enter your email address
+// 3. Click "Create Your Access Key"
+// 4. Copy the access key
+// 5. Replace YOUR_ACCESS_KEY below with your actual key
 // ============================================
-const EMAILJS_CONFIG = {
-  SERVICE_ID: 'YOUR_SERVICE_ID',      // Replace with your EmailJS Service ID
-  TEMPLATE_ID: 'YOUR_TEMPLATE_ID',    // Replace with your EmailJS Template ID
-  PUBLIC_KEY: 'YOUR_PUBLIC_KEY'       // Replace with your EmailJS Public Key
-};
+const WEB3FORMS_ACCESS_KEY = 'YOUR_ACCESS_KEY'; // Replace with your Web3Forms access key
 
 const Contact = ({ data }) => {
   const { toast } = useToast();
@@ -52,11 +37,11 @@ const Contact = ({ data }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Check if EmailJS is configured
-    if (EMAILJS_CONFIG.SERVICE_ID === 'YOUR_SERVICE_ID') {
+    // Check if Web3Forms is configured
+    if (WEB3FORMS_ACCESS_KEY === 'YOUR_ACCESS_KEY') {
       toast({
-        title: "⚠️ EmailJS Not Configured",
-        description: "Please set up EmailJS credentials in Contact.jsx file. Check the instructions at the top of the file.",
+        title: "⚠️ Web3Forms Not Configured",
+        description: "Please add your Web3Forms access key in Contact.jsx file.",
         variant: "destructive"
       });
       return;
@@ -65,29 +50,35 @@ const Contact = ({ data }) => {
     setIsSubmitting(true);
 
     try {
-      // Send email using EmailJS
-      await emailjs.send(
-        EMAILJS_CONFIG.SERVICE_ID,
-        EMAILJS_CONFIG.TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          to_name: 'Simran Koul' // Your name
-        },
-        EMAILJS_CONFIG.PUBLIC_KEY
-      );
+      // Prepare form data for Web3Forms
+      const formDataToSend = new FormData();
+      formDataToSend.append('access_key', WEB3FORMS_ACCESS_KEY);
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('subject', formData.subject);
+      formDataToSend.append('message', formData.message);
 
-      toast({
-        title: "Message Sent! 📧",
-        description: "Thank you for reaching out. I'll get back to you soon!",
+      // Send to Web3Forms
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSend
       });
-      
-      // Clear form
-      setFormData({ name: '', email: '', subject: '', message: '' });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Message Sent! 📧",
+          description: "Thank you for reaching out. I'll get back to you soon!",
+        });
+        
+        // Clear form
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error('Web3Forms Error:', error);
       toast({
         title: "Failed to Send Message",
         description: "There was an error sending your message. Please try again or contact me directly via email.",
