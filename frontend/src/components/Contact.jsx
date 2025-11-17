@@ -15,7 +15,7 @@ import { useToast } from '../hooks/use-toast';
 // 4. Copy the access key
 // 5. Replace YOUR_ACCESS_KEY below with your actual key
 // ============================================
-const WEB3FORMS_ACCESS_KEY = 'YOUR_ACCESS_KEY'; // Replace with your Web3Forms access key
+const WEB3FORMS_ACCESS_KEY = 'cfe908f3-8627-48a4-b60e-18e8f791d4a9'; // Replace with your Web3Forms access key
 
 const Contact = ({ data }) => {
   const { toast } = useToast();
