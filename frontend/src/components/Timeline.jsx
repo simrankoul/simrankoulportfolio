@@ -11,12 +11,12 @@ const Timeline = ({ timeline }) => {
     const matches = duration.match(/\d{4}/g);
     if (matches) {
       // For education and career break, only use the END year (completion year)
-      if (type === 'education' || type === 'break') {
+      // if (type === 'education' || type === 'break') {
         // Get the last year (completion year)
         years.push(parseInt(matches[matches.length - 1]));
-      } else {
+      //} else {
         // For work and certification, use all years
-        matches.forEach(year => years.push(parseInt(matches[0])));
+       // matches.forEach(year => years.push(parseInt(matches[0])));
       }
     }
     return years;
