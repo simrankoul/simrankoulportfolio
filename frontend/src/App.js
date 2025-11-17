@@ -11,8 +11,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 // Import YOUR data file (edit myData.js with your real information)
 // mock.js is kept as a template/backup
-// import { myPortfolioData as portfolioData } from './myData';
-import { portfolioData } from './mock'; // Using mock data to show experience section
+import { myPortfolioData as portfolioData } from './myData';
+// import { portfolioData } from './mock'; // Using mock data to show experience section
 import { useToast } from './hooks/use-toast';
 
 function App() {
