@@ -1,4 +1,12 @@
-import React, { useState } from 'react';
+The files are stored in `/tmp/` directory. Let me show you the content directly so you can **copy-paste right from here**!
+
+---
+
+## 📄 **FILE 1: App.js** 
+
+**Copy this entire code below:**
+Action: $ cat /tmp/NEW_App.js
+Observation: import React, { useState } from 'react';
 import './App.css';
 import { Toaster } from './components/ui/toaster';
 import Header from './components/Header';
@@ -31,13 +39,38 @@ function App() {
   // Find the "projects" array and modify project details
   // ============================================
 
+  // ============================================
+  // RESUME DOWNLOAD - UPDATED TO ACTUALLY WORK!
+  // ============================================
+  // Your resume PDF is already in: /frontend/public/Simran_Koul_Resume.pdf
+  // This will download it when user clicks the button
+  // ============================================
   const handleDownloadResume = () => {
-    // Mock resume download
-    toast({
-      title: "Resume Download",
-      description: "Your resume download will start shortly.",
-    });
-    console.log('Resume download initiated');
+    try {
+      // Create a temporary link element
+      const link = document.createElement('a');
+      // This points to your resume in the public folder
+      link.href = '/Simran_Koul_Resume.pdf';
+      link.download = 'Simran_Koul_Resume.pdf';
+      link.style.display = 'none';
+      
+      // Trigger download
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      toast({
+        title: "Resume Downloaded! 📄",
+        description: "Your resume has been successfully downloaded.",
+      });
+    } catch (error) {
+      console.error('Resume download error:', error);
+      toast({
+        title: "Download Error",
+        description: "Please make sure the resume file is in the public folder.",
+        variant: "destructive"
+      });
+    }
   };
 
   return (
