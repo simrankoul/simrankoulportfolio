@@ -5,8 +5,8 @@
   # Command to build the React app
   command = "yarn install && yarn build"
   
-  # Directory to publish (where the built files will be)
-  publish = "frontend/build"
+  # Directory to publish (relative to base directory)
+  publish = "build"
 
 [build.environment]
   # Node version
