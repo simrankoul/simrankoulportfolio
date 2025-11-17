@@ -57,60 +57,59 @@ export const myPortfolioData = {
       id: 1,
       type: "work",
       company: "Nagarro",
-      logo: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=100&h=100&fit=crop",
+      logo: "https://ibb.co/SwfbBBPD",
       designation: "Senior Engineer",
       duration: "Jan 2023 - Nov 2024",
       location: "Gurugram, India",
-      description: "Leading enterprise-level digital transformation projects with teams of 15+ members. Managed $2M+ project budgets and delivered 12 major projects with 98% client satisfaction.",
+      description: "Orchestrated cross-functional teams to onboard a new release process and change management.",
       achievements: [
-        "Led digital transformation initiative resulting in 40% operational efficiency",
-        "Managed cross-functional team of 20+ across 3 countries",
-        "Reduced project delivery time by 25% through Agile implementation"
+        "Onboarded 5 teams to implement weekly release process.",
+        "Migrated environments from On-prem to Cloud.",
+        "Formulated strategies to mitigate risk on-Live. "
       ]
     },
     {
       id: 2,
       type: "work",
       company: "Nagarro",
-      logo: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=100&h=100&fit=crop",
+      logo: "https://ibb.co/SwfbBBPD",
       designation: "Engineer",
       duration: "Feb 2022 - Jan 2023",
       location: "Gurugram, India",
-      description: "Managed software development projects and coordinated with stakeholders to ensure successful project delivery.",
+      description: "Optimised processes to streamline teams and increase efficiency",
       achievements: [
-        "Successfully delivered 8 projects on time and within budget",
-        "Improved team productivity by 30% through process optimization",
-        "Achieved 95% stakeholder satisfaction rating"
+        "Successfully heavy releases with 70+ user stories.",
+        "Automated processes to increase efficiency by 100%",
+        "Improved the collaboration between teams to improve communication and issue resolution."
       ]
     },
     {
       id: 3,
       type: "work",
       company: "Nagarro",
-      logo: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=100&h=100&fit=crop",
+      logo: "https://ibb.co/SwfbBBPD",
       designation: "Associate Engineer",
       duration: "Feb 2021 - Feb 2022",
       location: "Gurugram, India",
-      description: "Assisted senior project managers in planning and execution of medium-scale projects.",
+      description: "Managed Bi-weekly releases of the Investment Bank as the Client",
       achievements: [
-        "Coordinated 5 concurrent projects with team of 10 members",
-        "Implemented risk management framework",
-        "Reduced project risks by 35%"
+        "Handled Test and Staging environments with issues resolved within SLA.",
+        "Coordinated with multiple teams to ensure minimum blockers.",
+        "Reduced Go-Live issues by 50%."
       ]
     },
     {
       id: 4,
       type: "work",
       company: "Nagarro",
-      logo: "https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=100&h=100&fit=crop",
+      logo: "https://ibb.co/SwfbBBPD",
       designation: "Engineer Trainee",
       duration: "Nov 2020 - Jan 2021",
       location: "Gurugram, India",
-      description: "Supported project teams with scheduling, documentation, and stakeholder communication.",
+      description: "Successfully completed training on Cloud & DevOps Technologies",
       achievements: [
-        "Maintained 100% on-time project documentation",
-        "Streamlined communication processes",
-        "Supported 3 major product launches"
+        "Underwent training related to Jenkins, Azure, Ansible, Terraform, Azure DevOps.",
+        "Collaborated with team members to implement the learnings from the training as a project."
       ]
     },
     {
