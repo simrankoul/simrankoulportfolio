@@ -8,16 +8,16 @@
 
 export const myPortfolioData = {
   personal: {
-    name: "Your Full Name",
-    title: "Senior Project Manager",
-    tagline: "Your professional tagline here",
-    email: "your.email@example.com",
-    phone: "+1 (555) XXX-XXXX",
-    location: "Your City, State",
+    name: "Simran Koul",
+    title: "Project Manager",
+    tagline: "Bridging the gap between technology, business and people to deliver value.",
+    email: "simrankoul525@gmail.com",
+    phone: "+91 9779939097",
+    location: "Chandigarh, India",
     photo: "YOUR_PHOTO_URL",
     summary: "Your professional summary here...",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    github: "https://github.com/yourprofile",
+    linkedin: "https://linkedin.com/in/simrankoul",
+    github: "https://github.com/simrankoul",
     resumeUrl: "/resume.pdf"
   },
   
