@@ -1,12 +1,5 @@
-The files are stored in `/tmp/` directory. Let me show you the content directly so you can **copy-paste right from here**!
 
----
-
-## 📄 **FILE 1: App.js** 
-
-**Copy this entire code below:**
-Action: $ cat /tmp/NEW_App.js
-Observation: import React, { useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Toaster } from './components/ui/toaster';
 import Header from './components/Header';
