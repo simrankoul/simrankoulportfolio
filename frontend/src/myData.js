@@ -117,40 +117,41 @@ export const myPortfolioData = {
       id: 5,
       type: "break",
       title: "Career Break",
-      duration: "Jul 2016 - Dec 2016",
-      description: "Took a 6-month sabbatical for personal development and skill enhancement. Completed advanced certifications and traveled to gain global business perspectives.",
+      duration: "November 2024 - November 2025",
+      description: "Took 1-year break for personal development and skill enhancement.",
       activities: [
-        "Completed online courses in Advanced Project Management",
-        "Volunteered for non-profit project initiatives",
-        "Personal skill development and wellness focus"
+        "Prepared & Appeared for MBA Exams",
+        "Started my EPGP program with IIMK",
+        "Upskilled in Project Management",
+        "Volunteered for non-profit initiatives"
       ]
     },
     {
       id: 6,
       type: "education",
-      institution: "Stanford University",
-      degree: "Master of Business Administration (MBA)",
-      field: "Project Management & Strategy",
-      duration: "2014 - 2016",
-      location: "Stanford, CA",
-      gpa: "3.8/4.0",
-      achievements: [
+      institution: "Indian Institute of Management, Kozhikode",
+      degree: "Executive Post Graduate Program",
+      field: "General Management",
+      duration: "2025 - 2027",
+      location: "Kozhikode, India",
+      gpa: "3.22/4.33",
+      /* achievements: [
         "Dean's List for Academic Excellence",
         "Led student consulting project for Fortune 500 company"
-      ]
+      ] */
     },
     {
       id: 7,
       type: "education",
-      institution: "University of California",
-      degree: "Bachelor of Science",
-      field: "Business Administration",
-      duration: "2010 - 2014",
-      location: "Berkeley, CA",
-      gpa: "3.6/4.0",
+      institution: "Chitkara University",
+      degree: "Bachelor of Engineering",
+      field: "Computer Science",
+      duration: "2016 - 2020",
+      location: "Punjab, India",
+      gpa: "9.65/10.0",
       achievements: [
-        "President of Business Students Association",
-        "Graduated with Honors"
+        "Member of Toasmasters' International Club",
+        "Selected as part of Quick Heal Academy for Cyber Security Batch"
       ]
     },
     {
