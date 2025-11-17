@@ -15,9 +15,7 @@ export const myPortfolioData = {
     phone: "+91 9779939097",
     location: "Chandigarh, India",
     photo: "https://media.licdn.com/dms/image/v2/D5603AQHIBtIHEWYGzA/profile-displayphoto-scale_200_200/B56ZoiHPKOJwAY-/0/1761508914620?e=1764806400&v=beta&t=5IJZYOj5ywJsZrL9VaTj5Upt9pkSKpSspT-KgrBemek",
-    summary: "Results-driven professional with 4 years of experience delivering complex projects on time and within budget. Expert in Agile methodologies, stakeholder management, and cross-functional team leadership. Proven track record of improving operational efficiency and driving organizational success. Currently seeking opportunities to leverage my project management expertise in dynamic, growth-oriented environments.
-
-Successfully coordinated 25+ ",
+    summary: "Results-driven professional with 4 years of experience delivering complex projects on time and within budget. Expert in Agile methodologies, stakeholder management, and cross-functional team leadership. Proven track record of improving operational efficiency and driving organizational success. Currently seeking opportunities to leverage my project management expertise in dynamic, growth-oriented environments.",
     linkedin: "https://linkedin.com/in/simrankoul",
     github: "https://github.com/simrankoul",
     resumeUrl: "/resume.pdf"
