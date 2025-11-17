@@ -24,7 +24,7 @@ function App() {
   // To SHOW Projects section: Change false to true
   // To HIDE Projects section: Change true to false
   // ============================================
-  const [showProjects, setShowProjects] = useState(true);
+  const [showProjects, setShowProjects] = useState(false);
   
   // ============================================
   // To edit Projects data, go to: /app/frontend/src/mock.js
