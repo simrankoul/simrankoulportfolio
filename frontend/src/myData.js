@@ -18,7 +18,7 @@ export const myPortfolioData = {
     summary: "Results-driven professional with 4 years of experience delivering complex projects on time and within budget. Expert in Agile methodologies, stakeholder management, and cross-functional team leadership. Proven track record of improving operational efficiency and driving organizational success. Currently seeking opportunities to leverage my project management expertise in dynamic, growth-oriented environments.",
     linkedin: "https://linkedin.com/in/simrankoul",
     github: "https://github.com/simrankoul",
-    resumeUrl: "/resume.pdf"
+    resumeUrl: "https://drive.google.com/file/d/11AmNCkFCDDSSCdNAaa8CB3htTiDljvpS/view?usp=sharing"
   },
   
   skills: [
